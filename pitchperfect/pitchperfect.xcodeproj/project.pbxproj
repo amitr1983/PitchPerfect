@@ -12,6 +12,7 @@
 		281ACD702061AB3300642149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281ACD6E2061AB3300642149 /* Main.storyboard */; };
 		281ACD722061AB3300642149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281ACD712061AB3300642149 /* Assets.xcassets */; };
 		281ACD752061AB3300642149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281ACD732061AB3300642149 /* LaunchScreen.storyboard */; };
+		283B92A720BC7224009B7F64 /* ModulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B92A620BC7224009B7F64 /* ModulateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		281ACD712061AB3300642149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		281ACD742061AB3300642149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		281ACD762061AB3300642149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		283B92A620BC7224009B7F64 /* ModulateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				281ACD712061AB3300642149 /* Assets.xcassets */,
 				281ACD732061AB3300642149 /* LaunchScreen.storyboard */,
 				281ACD762061AB3300642149 /* Info.plist */,
+				283B92A620BC7224009B7F64 /* ModulateViewController.swift */,
 			);
 			path = pitchperfect;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				281ACD6D2061AB3300642149 /* ViewController.swift in Sources */,
 				281ACD6B2061AB3300642149 /* AppDelegate.swift in Sources */,
+				283B92A720BC7224009B7F64 /* ModulateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7YB54A645;
+				DEVELOPMENT_TEAM = 3FL2RN34Y9;
 				INFOPLIST_FILE = pitchperfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mad-developer.pitchperfect";
@@ -290,7 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L7YB54A645;
+				DEVELOPMENT_TEAM = 3FL2RN34Y9;
 				INFOPLIST_FILE = pitchperfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mad-developer.pitchperfect";
