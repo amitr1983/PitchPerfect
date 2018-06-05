@@ -68,14 +68,13 @@
         <!--Pitch Perfect-->
         <scene sceneID="I5n-Id-zWi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3o0-Xt-OiK" sceneMemberID="firstResponder"/>
-                <viewController id="VDr-Xu-k1b" customClass="ModulateViewController" customModule="pitchperfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VDr-Xu-k1b" customClass="PlaySoundsViewController" customModule="pitchperfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="doy-GK-pfI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-Mc-xtZ">
-                                <rect key="frame" x="72.5" y="53" width="230" height="270"/>
+                                <rect key="frame" x="72.5" y="37" width="230" height="270"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="s0j-cH-dQ9">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="90"/>
@@ -142,17 +141,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GF-k4-MiF">
-                                <rect key="frame" x="103" y="554" width="170" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="RECORD A NEW SOUND"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="aYo-bB-5dU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q65-Z0-U7Q">
-                                <rect key="frame" x="172" y="395" width="31" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q65-Z0-U7Q">
+                                <rect key="frame" x="172" y="361" width="31" height="40"/>
                                 <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="0.55294117649999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="pause"/>
@@ -160,11 +150,22 @@
                                     <action selector="stopSoundBtn:" destination="VDr-Xu-k1b" eventType="touchUpInside" id="ckm-Iu-LEB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOD-mC-CVk">
+                                <rect key="frame" x="102.5" y="499" width="170" height="30"/>
+                                <state key="normal" title="RECORD A NEW SOUND"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="AdI-9P-kan"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ta7-Mc-xtZ" firstAttribute="top" secondItem="sCn-uS-dzO" secondAttribute="top" constant="33" id="dCY-Bu-SQE"/>
-                            <constraint firstItem="ta7-Mc-xtZ" firstAttribute="centerX" secondItem="doy-GK-pfI" secondAttribute="centerX" id="zeq-uK-Uli"/>
+                            <constraint firstItem="ta7-Mc-xtZ" firstAttribute="top" secondItem="sCn-uS-dzO" secondAttribute="top" constant="17" id="5jR-cG-1ld"/>
+                            <constraint firstItem="q65-Z0-U7Q" firstAttribute="top" secondItem="ta7-Mc-xtZ" secondAttribute="bottom" constant="54" id="CCr-ZK-sIK"/>
+                            <constraint firstItem="pOD-mC-CVk" firstAttribute="top" secondItem="q65-Z0-U7Q" secondAttribute="bottom" constant="98" id="aJu-IY-MLb"/>
+                            <constraint firstItem="q65-Z0-U7Q" firstAttribute="centerX" secondItem="sCn-uS-dzO" secondAttribute="centerX" id="kga-KI-hhb"/>
+                            <constraint firstItem="ta7-Mc-xtZ" firstAttribute="centerX" secondItem="sCn-uS-dzO" secondAttribute="centerX" id="ryo-8Z-nBY"/>
+                            <constraint firstItem="pOD-mC-CVk" firstAttribute="centerX" secondItem="q65-Z0-U7Q" secondAttribute="centerX" id="w3s-29-EM9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sCn-uS-dzO"/>
                     </view>
@@ -172,16 +173,18 @@
                         <barButtonItem key="backBarButtonItem" title="Record" id="nvd-R6-wSN"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="chipMunkBtn" destination="olZ-uj-alT" id="iLE-Q1-ezR"/>
-                        <outlet property="darthBtn" destination="Z1Q-Bj-eCx" id="cJF-Gp-JJa"/>
-                        <outlet property="echo" destination="gVP-LU-3xy" id="PsN-fw-mqy"/>
-                        <outlet property="fastBtn" destination="Gdp-bK-YBh" id="qFL-1R-c5P"/>
-                        <outlet property="revervBtn" destination="DdZ-if-zVt" id="QNZ-bg-668"/>
-                        <outlet property="slowBtn" destination="mdg-OO-N1K" id="6Kd-XR-Gdg"/>
+                        <outlet property="chipmunkButton" destination="olZ-uj-alT" id="CcJ-ab-mZY"/>
+                        <outlet property="echoButton" destination="gVP-LU-3xy" id="gMl-4C-oM7"/>
+                        <outlet property="rabbitButton" destination="Gdp-bK-YBh" id="ATd-Zy-mQx"/>
+                        <outlet property="reverbButton" destination="DdZ-if-zVt" id="hXv-M2-NLM"/>
+                        <outlet property="snailButton" destination="mdg-OO-N1K" id="L3u-qf-E8K"/>
+                        <outlet property="stopButton" destination="q65-Z0-U7Q" id="OSH-RY-Dqv"/>
+                        <outlet property="vaderButton" destination="Z1Q-Bj-eCx" id="lJ1-7O-nWE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3o0-Xt-OiK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1302" y="-462"/>
+            <point key="canvasLocation" x="1301.5999999999999" y="-464.03940886699507"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xgy-Zz-Cy6">
@@ -221,7 +224,6 @@
         <image name="stop" width="155" height="155"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aYo-bB-5dU"/>
         <segue reference="PcV-0i-IFt"/>
     </inferredMetricsTieBreakers>
 </document>
