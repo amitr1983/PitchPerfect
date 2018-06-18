@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EJk-id-TuY">
-    <device id="retina5_5" orientation="landscape">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,39 +15,39 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pitchperfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to start recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRL-zL-rmB">
-                                <rect key="frame" x="286.66666666666669" y="114" width="163" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuo-uy-Ipp">
-                                <rect key="frame" x="290.66666666666669" y="129.66666666666666" width="155" height="154.99999999999997"/>
+                                <rect key="frame" x="256" y="110" width="155" height="155"/>
                                 <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopRecoring:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVo-ke-X12"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsX-1J-Pcd">
-                                <rect key="frame" x="290.66666666666669" y="129.66666666666666" width="155" height="154.99999999999997"/>
+                                <rect key="frame" x="256" y="110" width="155" height="155"/>
                                 <color key="tintColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="microphone"/>
                                 <connections>
                                     <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d5o-wT-Hcu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to start recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRL-zL-rmB">
+                                <rect key="frame" x="252" y="40" width="163" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="IsX-1J-Pcd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0cA-VV-IKO"/>
-                            <constraint firstItem="iRL-zL-rmB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="6FD-xY-DuV"/>
-                            <constraint firstItem="uuo-uy-Ipp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6Gg-wk-dbN"/>
-                            <constraint firstItem="iRL-zL-rmB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QCM-rR-kp7"/>
-                            <constraint firstItem="IsX-1J-Pcd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ehr-bV-p9g"/>
-                            <constraint firstItem="uuo-uy-Ipp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qoa-xw-AIN"/>
+                            <constraint firstItem="uuo-uy-Ipp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LhX-a7-QIR"/>
+                            <constraint firstItem="uuo-uy-Ipp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O1Z-wy-8ms"/>
+                            <constraint firstItem="iRL-zL-rmB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QEr-9q-7I6"/>
+                            <constraint firstItem="IsX-1J-Pcd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ggT-Sf-PSS"/>
+                            <constraint firstItem="IsX-1J-Pcd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="igY-D3-WWk"/>
+                            <constraint firstItem="uuo-uy-Ipp" firstAttribute="top" secondItem="iRL-zL-rmB" secondAttribute="bottom" constant="50" id="wUT-NC-eq9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -70,14 +70,14 @@
             <objects>
                 <viewController id="VDr-Xu-k1b" customClass="PlaySoundsViewController" customModule="pitchperfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="doy-GK-pfI">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ta7-Mc-xtZ">
-                                <rect key="frame" x="73" y="61" width="590" height="270"/>
+                                <rect key="frame" x="73" y="49" width="521" height="270"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="s0j-cH-dQ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="590" height="90"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="521" height="90"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdg-OO-N1K">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -90,8 +90,8 @@
                                                     <action selector="playSoundBtn:" destination="VDr-Xu-k1b" eventType="touchUpInside" id="vei-AY-865"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdp-bK-YBh">
-                                                <rect key="frame" x="500" y="0.0" width="90" height="90"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gdp-bK-YBh">
+                                                <rect key="frame" x="431" y="0.0" width="90" height="90"/>
                                                 <color key="tintColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="fast"/>
                                                 <connections>
@@ -101,7 +101,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="gzn-sj-m2Z">
-                                        <rect key="frame" x="0.0" y="90" width="590" height="90"/>
+                                        <rect key="frame" x="0.0" y="90" width="521" height="90"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdZ-if-zVt">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -115,7 +115,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olZ-uj-alT">
-                                                <rect key="frame" x="500" y="0.0" width="90" height="90"/>
+                                                <rect key="frame" x="431" y="0.0" width="90" height="90"/>
                                                 <color key="tintColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="chipmunk"/>
                                                 <connections>
@@ -125,7 +125,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-cF-r5d">
-                                        <rect key="frame" x="0.0" y="180" width="590" height="90"/>
+                                        <rect key="frame" x="0.0" y="180" width="521" height="90"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z1Q-Bj-eCx">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
@@ -138,8 +138,8 @@
                                                     <action selector="playSoundBtn:" destination="VDr-Xu-k1b" eventType="touchUpInside" id="WBB-8Y-9qM"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-LU-3xy">
-                                                <rect key="frame" x="500" y="0.0" width="90" height="90"/>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-LU-3xy">
+                                                <rect key="frame" x="431" y="0.0" width="90" height="90"/>
                                                 <color key="tintColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="echo"/>
                                                 <connections>
@@ -151,14 +151,14 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOD-mC-CVk">
-                                <rect key="frame" x="283" y="304" width="170" height="30"/>
+                                <rect key="frame" x="248.5" y="215" width="170" height="30"/>
                                 <state key="normal" title="RECORD A NEW SOUND"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="AdI-9P-kan"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q65-Z0-U7Q">
-                                <rect key="frame" x="147" y="339" width="442" height="66"/>
+                                <rect key="frame" x="293.5" y="288" width="80" height="80"/>
                                 <state key="normal" image="pause"/>
                                 <connections>
                                     <action selector="stopSoundBtn:" destination="VDr-Xu-k1b" eventType="touchUpInside" id="ckm-Iu-LEB"/>
@@ -169,10 +169,9 @@
                         <constraints>
                             <constraint firstItem="q65-Z0-U7Q" firstAttribute="centerX" secondItem="pOD-mC-CVk" secondAttribute="centerX" id="59Z-Kv-4Xx"/>
                             <constraint firstItem="ta7-Mc-xtZ" firstAttribute="leading" secondItem="sCn-uS-dzO" secondAttribute="leading" constant="73" id="6GF-at-Is3"/>
-                            <constraint firstItem="q65-Z0-U7Q" firstAttribute="top" secondItem="ta7-Mc-xtZ" secondAttribute="bottom" constant="8" symbolic="YES" id="D31-GV-lQ4"/>
-                            <constraint firstItem="q65-Z0-U7Q" firstAttribute="leading" secondItem="sCn-uS-dzO" secondAttribute="leading" constant="147" id="JqK-KZ-G5W"/>
+                            <constraint firstItem="q65-Z0-U7Q" firstAttribute="top" secondItem="ta7-Mc-xtZ" secondAttribute="bottom" constant="-31" id="D31-GV-lQ4"/>
                             <constraint firstItem="ta7-Mc-xtZ" firstAttribute="centerX" secondItem="pOD-mC-CVk" secondAttribute="centerX" id="OqT-SK-2Kw"/>
-                            <constraint firstItem="sCn-uS-dzO" firstAttribute="bottom" secondItem="pOD-mC-CVk" secondAttribute="bottom" constant="80" id="P2q-Kj-swh"/>
+                            <constraint firstItem="sCn-uS-dzO" firstAttribute="bottom" secondItem="pOD-mC-CVk" secondAttribute="bottom" constant="130" id="P2q-Kj-swh"/>
                             <constraint firstItem="ta7-Mc-xtZ" firstAttribute="top" secondItem="sCn-uS-dzO" secondAttribute="top" constant="17" id="U3U-pY-HlB"/>
                             <constraint firstItem="ta7-Mc-xtZ" firstAttribute="centerX" secondItem="doy-GK-pfI" secondAttribute="centerX" id="Ycj-t0-XEV"/>
                         </constraints>
@@ -193,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3o0-Xt-OiK" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301.5999999999999" y="-464.03940886699507"/>
+            <point key="canvasLocation" x="1301.231527093596" y="-464.80000000000001"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xgy-Zz-Cy6">
@@ -201,7 +200,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EJk-id-TuY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Zx-ri-zYb">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.0" green="0.76470588240000004" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -227,7 +226,7 @@
         <image name="echo" width="90" height="90"/>
         <image name="fast" width="90" height="90"/>
         <image name="microphone" width="155" height="155"/>
-        <image name="pause" width="66" height="66"/>
+        <image name="pause" width="80" height="80"/>
         <image name="reverb" width="90" height="90"/>
         <image name="slow" width="90" height="90"/>
         <image name="stop" width="155" height="155"/>
