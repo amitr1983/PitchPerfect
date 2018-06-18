@@ -11,6 +11,7 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
+    // Connect buttons with storyboard
     @IBOutlet weak var snailButton: UIButton!
     
     @IBOutlet weak var rabbitButton: UIButton!
@@ -35,6 +36,7 @@ class PlaySoundsViewController: UIViewController {
     var echo: Bool!
     var reverb: Bool!
     
+    // enup for buttons. I have added tag for buttons starting from 0 to 5
     enum ButtonType: Int { case slow = 0, fast, reverb, chipmunk, vader, echo }
     
     override func viewDidLoad() {
@@ -48,6 +50,7 @@ class PlaySoundsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // Disable button while loading the screen
         configureUI(.notPlaying)
     }
 
@@ -56,6 +59,7 @@ class PlaySoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Modify the voice when user press the button.
     @IBAction func playSoundBtn(_ sender: UIButton) {
         if recordedAudioURL != nil {
             
@@ -86,6 +90,7 @@ class PlaySoundsViewController: UIViewController {
         }
     }
     
+    //Stop sound when tap on 'Stop/pause' button.
     @IBAction func stopSoundBtn(_ sender: Any) {
         print("Stop sound")
         stopAudio()
