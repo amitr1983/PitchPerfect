@@ -35,14 +35,16 @@ class PlaySoundsViewController: UIViewController {
     var echo: Bool!
     var reverb: Bool!
     
-    enum ButtonType: Int { case slow = 0, fast, chipmunk, vader, echo, reverb }
+    enum ButtonType: Int { case slow = 0, fast, reverb, chipmunk, vader, echo }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Play Sounds View Loaded")
         print(recordedAudioURL)
-        print(audioFile)
         // Do any additional setup after loading the view.
+        if recordedAudioURL != nil {
+            setupAudio()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,24 +57,33 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playSoundBtn(_ sender: UIButton) {
-        print("Start sound")
-        switch(ButtonType(rawValue: sender.tag)!) {
-        case .slow:
-            playSound(rate: 0.5)
-        case .fast:
-            playSound(rate: 1.5)
-        case .chipmunk:
-            playSound(pitch: 1000)
-        case .vader:
-            playSound(pitch: -1000)
-        case .echo:
-            playSound(echo: true)
-        case .reverb:
-            playSound(reverb: true)
+        if recordedAudioURL != nil {
+            
+            stopButton.isEnabled = true
+            stopButton.isHidden = false
+            
+            print("Start sound")
+            switch(ButtonType(rawValue: sender.tag)!) {
+            case .slow:
+                playSound(rate: 0.5)
+            case .fast:
+                playSound(rate: 1.5)
+            case .chipmunk:
+                playSound(pitch: 1000)
+            case .vader:
+                playSound(pitch: -1000)
+            case .echo:
+                playSound(echo: true)
+            case .reverb:
+                playSound(reverb: true)
+                
+            }
+            let disableButton = sender as? UIButton
+            disableButton?.isEnabled = false
+            
+        } else {
+            showAlert("Record First", message: "Tap on Record to record voice")
         }
-        
-        configureUI(.playing)
-        
     }
     
     @IBAction func stopSoundBtn(_ sender: Any) {
