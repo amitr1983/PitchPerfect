@@ -30,9 +30,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     //Record voice when user tap on record
     @IBAction func record(_ sender: Any) {
         print("Recording is in progress")
-        recordingInfoLabel.text="Tap to finish Recording"
-        recordBtn.isHidden=true
-        stopBtn.isHidden=false
+        configureUI(true)
         
         // Declare directory path where i'm planning to store recording clip
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory , .userDomainMask , true)[0] as String
@@ -52,9 +50,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
     
     @IBAction func stopRecoring(_ sender: Any) {
         print("Stopped Recording")
-        recordingInfoLabel.text="Tap to start Recording"
-        recordBtn.isHidden=false
-        stopBtn.isHidden=true
+        configureUI(false)
         audioRecorder.stop()
         let session = AVAudioSession.sharedInstance()
         try! session.setActive(false)
@@ -66,8 +62,7 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
             print("Got an error")
-            recordBtn.isHidden = false
-            stopBtn.isHidden = true
+            configureUI(false)
         }
     }
     
@@ -78,6 +73,16 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             let recordedAudioURL = sender as! URL
             playSoundVC.recordedAudioURL = recordedAudioURL
         }
+    }
+
+
+    func configureUI(_ isRecording:Bool = false) {
+        print("Recording is in progress")
+        recordingInfoLabel.text = isRecording ? "Recording in progress": "Tap to start Recording"
+        recordBtn.isEnabled = !isRecording
+        recordBtn.isHidden = isRecording
+        stopBtn.isEnabled = isRecording
+        stopBtn.isHidden = !isRecording
     }
     
 }

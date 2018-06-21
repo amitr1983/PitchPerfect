@@ -47,6 +47,14 @@ class PlaySoundsViewController: UIViewController {
         if recordedAudioURL != nil {
             setupAudio()
         }
+        
+        snailButton.imageView?.contentMode = .scaleAspectFit
+        echoButton.imageView?.contentMode = .scaleAspectFit
+        reverbButton.imageView?.contentMode = .scaleAspectFit
+        chipmunkButton.imageView?.contentMode = .scaleAspectFit
+        vaderButton.imageView?.contentMode = .scaleAspectFit
+        rabbitButton.imageView?.contentMode = .scaleAspectFit
+        stopButton.imageView?.contentMode = .scaleAspectFit
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,5 +103,10 @@ class PlaySoundsViewController: UIViewController {
         print("Stop sound")
         stopAudio()
     }
+    
+    @IBAction func clickRecordBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 
 }
